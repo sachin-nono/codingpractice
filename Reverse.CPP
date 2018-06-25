@@ -1,3 +1,6 @@
+/*
+WAP to calculate and print reverse of a no step by step...
+*/
 #include"iostream.h"
 #include"conio.h"
 #include"dos.h"

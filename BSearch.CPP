@@ -1,3 +1,5 @@
+/*WAP for Binary search of an element in an array
+*/
 #include"iostream.h"
 #include"conio.h"
 #include"dos.h"

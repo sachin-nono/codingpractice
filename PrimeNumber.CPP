@@ -1,5 +1,5 @@
 /*
-WAP to do something...
+WAP to check prime no...
 
 */
 

@@ -1,4 +1,6 @@
-#include"iostream.h"
+/*
+WAP  for Linear Search of an element in an array...
+*/#include"iostream.h"
 #include"conio.h"
 #include"dos.h"
 #include"stdlib.h"

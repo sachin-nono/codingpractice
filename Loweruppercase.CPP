@@ -1,3 +1,5 @@
+/*To check whether a character is lowercase or uppercase
+*/
 #include"iostream.h"
 #include"conio.h"
 #include"ctype.h"

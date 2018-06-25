@@ -1,3 +1,6 @@
+/*
+WAP to print prime no within given range  (Sieve of Eratosthenes)...
+*/
 #include"iostream.h"
 #include"conio.h"
 #include"dos.h"

@@ -1,3 +1,5 @@
+/*WAP a program to create a basic calculator
+*/
 #include"iostream.h"
 #include"conio.h"
 void main()

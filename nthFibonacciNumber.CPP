@@ -1,3 +1,6 @@
+/*
+WAP to print nth fibonacci no.... 
+*/
 #include"iostream.h"
 #include"conio.h"
 void main()

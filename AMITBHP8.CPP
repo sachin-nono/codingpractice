@@ -1,3 +1,9 @@
+/*       pattern:
+1
+22
+303
+4004   */
+
 #include"iostream.h"
 #include"conio.h"
 void main()
