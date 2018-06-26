@@ -1,5 +1,14 @@
+/* Pattern
+     *
+    * *
+   * * *
+    * *
+     *
+*/
 #include"iostream.h"
 #include"conio.h"
+#include"stdlib.h"
+#include"dos.h"
 
 void main()
 {
@@ -7,8 +16,12 @@ void main()
  int rows,k,l,j,o,m,i,p,z=2;
  cout<<"Enter no of rows(only odd no.):";
  cin>>rows;
-// if(rows%2==0)
-  //	exit();
+ if(rows%2==0)
+	{
+	cout<<"I said only odd number of rows!!!";
+	sleep(1);
+	exit(6);
+	}
  l=rows/2;
  l+=1;
  m=l;

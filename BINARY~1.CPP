@@ -1,6 +1,7 @@
 #include<fstream.h>
 #include<conio.h>
 #include<stdio.h>
+#include<stdlib.h>
 class student
 {
 int rno;
@@ -8,16 +9,16 @@ char name[20];
 public:
 void get()
 {
-cout<<"enter roll number ";
+cout<<"Enter roll number: ";
 cin>>rno;
-cout<<"enter name ";
+cout<<"\nEnter name: ";
 gets(name);
 }
 void show()
 {
-cout<<"details are:";
-cout<<"roll number:"<<rno;
-cout<<"name:";
+cout<<"Details are:";
+cout<<"\nRoll number:"<<rno;
+cout<<"\tName:";
 puts(name);
 }
 int retrno()
@@ -33,7 +34,7 @@ do
 {
 s.get();
 f.write((char*)&s,sizeof(s));
-cout<<"continue?";
+cout<<"Continue?\n(Enter y or Y if Yes)";
 cin>>a;
 }while(a=='y'||a=='Y');
 f.close();
@@ -52,7 +53,7 @@ void search()
 fstream f;
 f.open("stud.dat", ios::binary| ios::in);
 int r;
-cout<<"enter roll number to be searched";
+cout<<"\nEnter roll number to be searched: ";
 cin>>r;
 while(f.read((char *)&s, sizeof(s)))
 {
@@ -70,7 +71,7 @@ fstream f;
 fstream f1;
 f.open("stud.dat",ios::binary|ios::in);
 f1.open("stud1.dat",ios::binary|ios::out);
-cout<<"enter record to be deleted";
+cout<<"\nEnter record to be deleted:";
 cin>>rec;
 while(f.read((char*)&s,sizeof(s)))
 {
@@ -88,12 +89,12 @@ clrscr();
 int ch;
 do
 {
-cout<<"\n1.Add data"
-    <<"\n2.Display data"
-    <<"\n3.Search data"
-    <<"\n4.Delete data"
-    <<"\n5.Exit"
-    <<"\nEnter your choice";
+cout<<"\n1.Add data."
+    <<"\n2.Display data."
+    <<"\n3.Search data."
+    <<"\n4.Delete data."
+    <<"\n5.Exit."
+    <<"\nEnter your choice: ";
 cin>>ch;
 switch(ch)
 {
@@ -105,8 +106,10 @@ case 3: search();
 break;
 case 4: del();
 break;
+case 5: exit(9);
+break;
 default:
-cout<<"invalid choice";
+cout<<"Invalid Choice!!!";
 }
 }while(ch!=5);
 getch();

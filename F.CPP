@@ -1,7 +1,10 @@
+/*Text in the xyz.txt file is
+"Time is a great teacher but unfortunately it kills all its pupils."*/
 #include<conio.h>
 #include<fstream.h>
 #include<string.h>
 #include<process.h>
+#include<stdlib.h>
 void word()
 {
   int word=0;
@@ -112,11 +115,13 @@ do{
    case 4:
      vowels();
      break;
+   case 5:
+     exit(0);
 
    default:
     cout<<"invalid choice";
    }
-  }while (ch!=5)
+  }while (ch!=5);
 
 f.close();
 getch();
