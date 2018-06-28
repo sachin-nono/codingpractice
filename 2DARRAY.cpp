@@ -1,6 +1,7 @@
 #include<fstream.h>
 #include<conio.h>
 #include<process.h>
+// do proper indentation
 void selements(int A[][3],int r, int c)
 {
 
@@ -14,6 +15,8 @@ s=s+A[i][j];
 }
 cout<<"Sum of elements:"<<s;
 }
+
+// leave one line before starting new function definition
 void individualrows(int A[][3], int r, int c)
 {
 for(int i=0; i<r;i++)
