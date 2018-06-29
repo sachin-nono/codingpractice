@@ -5,6 +5,7 @@ Print TRUE if it is otherwise FALSE
 */
 #include"iostream.h"
 #include"conio.h"
+
 void main()
 {
 clrscr();
@@ -15,6 +16,7 @@ cin>>num;
 isarms(num);
 getch();
 }
+
 void isarms(long num)
 {
 long a=num,sum=0,x;
