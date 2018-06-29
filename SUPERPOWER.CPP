@@ -4,6 +4,7 @@ Calculate a^b
 */
 #include"iostream.h"
 #include"conio.h"
+
 void main()
 {
 clrscr();
@@ -14,6 +15,7 @@ z=power(x,y);
 cout<<x<<" raised to power "<<y<<" is :"<<z;
 getch();
 }
+
 long power(int x,int y)
 {
 long a=1;
