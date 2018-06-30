@@ -7,7 +7,8 @@ and write a recursive function which returns the first index at which M is found
 #include"conio.h"
 #include"dos.h"
 #include"stdlib.h"
-int y=1;          //used in recursive function
+int y=1;    //used in recursive function
+
 void main()
 {
 clrscr();
@@ -19,9 +20,12 @@ int size,arr[101],m,x;
 cout<<"Enter size of array (<100) :";
 cin>>size;
 check(size);
+	
 arrele(arr,size);
+	
 cout<<"\nEnter element to be searched:";
 cin>>m;
+	
 x=rec(arr,size,m);
 if(x!=-1)
 	cout<<"First appearence of element "<<m<<" has been noticed at position:"<<x+1;
@@ -29,6 +33,7 @@ if(x!=-1)
 		cout<<"This element doesnt exist in above array.";
 getch();
 }
+
 void check(int size)
 {
 if(size<=0||size>100)

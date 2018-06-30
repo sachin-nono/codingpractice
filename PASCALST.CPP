@@ -1,16 +1,39 @@
 /*
-Pascals Triange
+PASCALS TRIANGLE
+1
+11
+121
+1331
 */
 #include"iostream.h"
 #include"conio.h"
-#include"math.h"
+
 void main()
 {
 clrscr();
-int n;
+int rows;
+long fact(int);       //to calculate factorial
+
 cout<<"Enter number of rows:";
-cin>>n;
-for(int i=0;i<n;i++)
-	cout<<pow(11,i)<<endl;
+cin>>rows;
+
+for(int i=0;i<rows;i++)
+	{
+	for(int j=0;j<=i;j++)
+		cout<<fact(i)/(fact(j)*fact(i-j))<<"\t";
+	cout<<endl;
+	}
 getch();
+}
+
+long fact(int num)
+{
+long f=1;
+int i=1;
+while(i<=num)
+	{
+	f=f*i;
+	i++;
+	}
+return f;
 }
