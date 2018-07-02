@@ -41,7 +41,6 @@ if(z<=0||z>100)
 	{
 	cout<<"\nEnter in the given range!!!";
 	sleep(1);
-	exit(0);
 	}
 	else
 		cout<<"\nEnter array elements in ascending order only:\n";
