@@ -6,11 +6,13 @@ for rows=4, pattern will be
 1       2	3               3       2       1
 1       2       3	4	3	2       1
 */
-#include"iostream.h"
-#include"conio.h"
-void main()
+
+#include<iostream>
+
+using namespace std;
+
+int main()
 {
-clrscr();
 int rows,i,j,k,l,m,n,x;
 
 cout<<"Enter number of rows:";
@@ -37,5 +39,5 @@ for(i=rows;i<=rows;i+=5)     // for last row
 		cout<<n<<"\t";
 	}
 
-getch();
+return 0;
 }
