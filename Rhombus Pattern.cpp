@@ -7,13 +7,15 @@ for N=3
 	2	3       2
 		1
 */
-#include"iostream.h"
-#include"conio.h"
 
-void main()
+#include<iostream>
+
+using namespace std;
+
+int main()
 {
-clrscr();
 int rows,i,j,k,l,m,n,o,a,b,c,x=0,y=1,z=1;
+
 cout<<"Enter number of rows:";
 cin>>rows;
 
@@ -37,9 +39,11 @@ for(i=1;i<=rows;i++)
 	z+=2;
 	cout<<endl;
 	}
+	
 a=x-1;
 b=y-1;
 c=z-4;
+
 for(m=rows-1;m>=1;m--)
 	{
 	for(j=rows;j>m;j--)       //for tabs
@@ -55,5 +59,6 @@ for(m=rows-1;m>=1;m--)
 	c-=2;
 	cout<<endl;
 	}
-getch();
+
+return 0;
 }
