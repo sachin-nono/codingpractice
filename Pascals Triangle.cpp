@@ -1,16 +1,18 @@
 /*
-PASCALS TRIANGLE
+PASCALS TRIANGLE   for n=4,
 1
 11
 121
 1331
 */
-#include"iostream.h"
-#include"conio.h"
 
-void main()
+#include<iostream>
+#include<conio>
+
+using namespace std;
+
+int main()
 {
-clrscr();
 int rows;
 long fact(int);       //to calculate factorial
 
@@ -23,17 +25,20 @@ for(int i=0;i<rows;i++)
 		cout<<fact(i)/(fact(j)*fact(i-j))<<"\t";
 	cout<<endl;
 	}
-getch();
+
+return 0;
 }
 
 long fact(int num)
 {
 long f=1;
 int i=1;
+
 while(i<=num)
 	{
 	f=f*i;
 	i++;
 	}
+
 return f;
 }
