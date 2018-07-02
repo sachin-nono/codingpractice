@@ -1,17 +1,20 @@
 /*
 Print Armstrong Numbers between a given range
 */
-#include"iostream.h"
-#include"conio.h"
-void main()
+#include<iostream>
+
+using namespace std;
+
+int main()
 {
-clrscr();
 long first,second,num,sum;
 long checkarms(long);
+
 cout<<"Enter first number(between 0 to 100):";
 cin>>first;
 cout<<"\nEnter second number(between first to 10000):";
 cin>>second;
+
 for(long i=first;i<=second;i++)
 	{
 	num=i;
@@ -20,7 +23,7 @@ for(long i=first;i<=second;i++)
 		cout<<i<<"\t";
 	sum=0;
 	}
-getch();
+return 0;
 }
 
 long checkarms(long num)
