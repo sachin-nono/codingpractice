@@ -1,22 +1,30 @@
 //Bubble Sort
-#include"iostream.h"
-#include"conio.h"
-#include"dos.h"
-#include"stdlib.h"
-void main()
+
+#include<iostream>
+#include<dos>
+#include<cstdlib>
+
+using namespace std;
+
+int main()
 {
-clrscr();
 long arr[101],size;
 void condition(long),bubblesort(long [],long);
+
 cout<<"Enter size of array<100 :";
 cin>>size;
-condition(size);
+
+condition(size);         //to check if entered size is in given range or not
+
 cout<<"\nEnter elements of array:\n";
 for(long i=0;i<size;i++)
 	cin>>arr[i];
-bubblesort(arr,size);
-getch();
+	
+bubblesort(arr,size);        //Function call
+
+return 0;
 }
+
 void condition(long size)
 {
 if(size<=0||size>101)
@@ -44,9 +52,10 @@ for(long i=0;i<size;i++)
 		ptr+=1;
 		}
 	}
+
 cout<<endl;
-cout<<"Sorted array:";
-cout<<endl;
+
+cout<<"Sorted array:"<<endl;
 for(i=0;i<size;i++)
 	cout<<arr[i]<<"\n";
 }
