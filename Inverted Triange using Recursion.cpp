@@ -1,19 +1,32 @@
-/*WAP to print a pattern by recursion*/
-//Enter what is asked and wait and dont press enter!!!
-#include"iostream.h"
-#include"conio.h"
-#include"stdlib.h"
-#include"dos.h"
-void main()
+/*
+WAP to print a inverted triange pattern by recursion
+for ex. for n=3, pattern will be
+*	*	*
+*	*
+*
+
+*/
+
+#include<iostream>
+#include<cstdlib>
+#include<dos>
+
+using namespace std;
+
+int main()
 {
-clrscr();
 void recursion(int);
+
 int x;
+
 cout<<"Enter no of rows:";
 cin>>x;
+
 recursion(x);
-getch();
+
+return 0;;
 }
+
 void recursion(int x)
 {
  int y=x;
@@ -26,6 +39,7 @@ void recursion(int x)
 	y--;
 	recursion(y);
 	}
+	
 	else
 		{
 		sleep(1);
