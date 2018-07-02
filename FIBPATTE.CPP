@@ -1,8 +1,7 @@
-#include"iostream.h"
-#include"conio.h"
-void main()
+#include<iostream>
+using namespace std;
+int main()
 {
-clrscr();
 int rows;
 long fn=0,sn=1,tn;
 cout<<"Enter no of rows:";
@@ -20,5 +19,5 @@ for(int i=1;i<=rows;i++)
 	cout<<endl;
 
 	}
-getch();
+return 0;
 }

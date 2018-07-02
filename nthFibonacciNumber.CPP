@@ -1,11 +1,11 @@
 /*
 WAP to print nth fibonacci no.... 
 */
-#include"iostream.h"
-#include"conio.h"
-void main()
+#include <iostream>
+using namespace std;
+
+int main()
 {
-clrscr();
 int fn=0,sn=1,tn,no;
 cout<<"Enter a no 0<=no<=1000 :";
 cin>>no;
@@ -18,5 +18,5 @@ for(int i=1;i<=no;i++)
 	sn=tn;
 	}
 cout<<endl<<no<<"th Fibonacci no is :"<<fn;
-getch();
+return 0;
 }

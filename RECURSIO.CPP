@@ -1,18 +1,17 @@
 /*WAP to print a pattern by recursion*/
 //Enter what is asked and wait and dont press enter!!!
-#include"iostream.h"
-#include"conio.h"
-#include"stdlib.h"
-#include"dos.h"
-void main()
+#include<iostream>
+//#include"stdlib.h"
+//#include"dos.h"
+using namespace std;
+int main()
 {
-clrscr();
 void recursion(int);
 int x;
 cout<<"Enter no of rows:";
 cin>>x;
 recursion(x);
-getch();
+return 0;
 }
 void recursion(int x)
 {
@@ -28,9 +27,9 @@ void recursion(int x)
 	}
 	else
 		{
-		sleep(1);
+		//sleep(1);
 		cout<<"\nGood Bye!!!";
-		sleep(1);
+		//sleep(1);
 		exit(0);
 		}
 }
