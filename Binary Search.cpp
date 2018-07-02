@@ -1,28 +1,38 @@
-/*WAP for Binary search of an element in an array
+/*
+WAP for Binary search of an element in an array
 */
-#include"iostream.h"
-#include"conio.h"
-#include"dos.h"
-#include"stdlib.h"
-void main()
+#include<iostream>
+#include<dos>
+#include<cstdlib>
+
+using namespace std;
+
+int main()
 {
-clrscr();
 int binarysearch(int [],int,int);
 void condition(int);
+
 int size,arr[100],ele,pos;
+
 cout<<"Enter size of array<100 :";
 cin>>size;
-condition(size);
-for(int i=0;i<size;i++)
+
+condition(size);         //to check if entered sizs is in given range or not
+
+for(int i=0;i<size;i++)  //enter array elements
 	cin>>arr[i];
+
 cout<<"\nEnter element to be searched:";
 cin>>ele;
-pos=binarysearch(arr,size,ele);
+
+pos=binarysearch(arr,size,ele);   //function call
+
 if(pos!=-1)
 	cout<<"\nElement is found at position:"<<pos;
 	else
 		cout<<"\nNot found!!!";
-getch();
+
+return 0;
 }
 
 void condition(int z)
@@ -36,9 +46,11 @@ if(z<=0||z>100)
 	else
 		cout<<"\nEnter array elements in ascending order only:\n";
 }
+
 int binarysearch(int arr[],int size,int ele)
 {
 int x,beg=0,last=size-1,mid;
+
 while(beg<=last)
 	{
 	mid=int((beg+last)/2);
