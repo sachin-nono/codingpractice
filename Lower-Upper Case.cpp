@@ -1,18 +1,25 @@
-/*To check whether a character is lowercase or uppercase
+/*
+To check whether a character is lowercase or uppercase
 */
-#include"iostream.h"
-#include"conio.h"
-#include"ctype.h"
-void main()
+
+#include<iostream>
+#include<ctype>
+
+using namespace std;
+
+int main()
 {
-clrscr();
 void check(char);
 char ch;
+
 cout<<"Enter a character:";
 cin>>ch;
+
 check(ch);
-getch();
+
+return 0;;
 }
+
 void check(char ch)
 {
 if(isalpha(ch))
