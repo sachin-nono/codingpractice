@@ -2,8 +2,8 @@
 WAP to print prime no within given range  (Sieve of Eratosthenes)...
 */
 #include"iostream"
-#include"dos.h"
-#include"stdlib.h"
+#include"dos"
+#include"stdlib"
 
 using namespace std;
 
