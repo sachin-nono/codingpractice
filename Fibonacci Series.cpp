@@ -1,24 +1,29 @@
 /*
 WAP to print Fibonacci series
 */
-#include"iostream.h"
-#include"conio.h"
-#include"dos.h"
-#include"stdlib.h"
-void main()
+#include<iostream>
+#include<dos>
+#include<cstdlib>
+
+using namespace std;
+
+int main()
 {
-clrscr();
 int fn=0,sn=1,tn,no;
+
 cout<<"Enter a no 0<=no<=1000 :";
 cin>>no;
 cout<<endl;
+
 if(no<1||no>1000)
 	{
 	cout<<"Enter no in given range!!!";
 	sleep(1);
 	exit(0);
 	}
+
 cout<<endl<<" Fibonacci Series upto "<<no<<" is :";
+
 for(int i=1;i<=no;i++)
 	{
 	cout<<fn<<" ";
@@ -26,5 +31,6 @@ for(int i=1;i<=no;i++)
 	fn=sn;
 	sn=tn;
 	}
-getch();
+
+return 0;
 }
