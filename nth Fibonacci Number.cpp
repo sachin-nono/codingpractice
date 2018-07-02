@@ -1,9 +1,12 @@
 /*
 WAP to print nth fibonacci no.... 
 */
-#include"iostream.h"
 
-void main()
+#include<iostream>
+
+using namespace std;
+
+int main()
 {
 int fn=0,sn=1,tn,no;
 
@@ -20,4 +23,5 @@ for(int i=1;i<=no;i++)
 	}
 
 cout<<endl<<no<<"th Fibonacci no is :"<<fn;
+return 0;
 }
