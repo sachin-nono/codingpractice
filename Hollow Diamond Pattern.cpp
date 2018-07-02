@@ -8,11 +8,13 @@ for N=5
 * *   * *
 * * * * *
 */
-#include"iostream.h"
-#include"conio.h"
-void main()
+
+#include<iostream>
+
+using namespace std;
+
+int main()
 {
-clrscr();
 int rows,a,c,x,i,j,k,l,m;
 
 cout<<"Enter number of rows:";
@@ -64,5 +66,5 @@ for(i=x+1;i<=rows;i++)                              //for lower half
 	cout<<endl;
 	}
 
-getch();
+return 0;
 }
