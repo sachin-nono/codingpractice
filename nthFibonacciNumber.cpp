@@ -1,9 +1,13 @@
 /*
 WAP to print nth fibonacci no.... 
 */
+<<<<<<< HEAD:nthFibonacciNumber.CPP
+#include <iostream>
+=======
 
 #include<iostream>
 
+>>>>>>> c700d35abf4555cbf59093ede5d46135a128dc5d:nth Fibonacci Number.cpp
 using namespace std;
 
 int main()
@@ -24,4 +28,8 @@ for(int i=1;i<=no;i++)
 
 cout<<endl<<no<<"th Fibonacci no is :"<<fn;
 return 0;
+<<<<<<< HEAD:nthFibonacciNumber.CPP
 }
+=======
+}
+>>>>>>> c700d35abf4555cbf59093ede5d46135a128dc5d:nth Fibonacci Number.cpp

@@ -18,13 +18,13 @@ if(size<=0||size>1000)                  //to check if entered size is in given r
 	{
 	cout<<"\nEnter in the given range!!!";
 	sleep(1);
-	exit(1);
 	}
-
-cout<<"\nEnter elements of array:\n";
-for(int i=0;i<size;i++)
-	cin>>arr[i];
-
+	else
+	{
+	cout<<"\nEnter elements of array:\n";
+	for(int i=0;i<size;i++)
+		cin>>arr[i];
+	}
 cout<<"\nEnter a no to search:";
 cin>>no;
 

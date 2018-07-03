@@ -1,3 +1,10 @@
+<<<<<<< HEAD:TRIANGLE.CPP
+#include"iostream"
+using namespace std;
+int main()
+{
+
+=======
 /*
 Triangle Pattern
 for ex. for n=3, the pattern will be
@@ -11,6 +18,7 @@ using namespace std;
 
 int main()
 {
+>>>>>>> c700d35abf4555cbf59093ede5d46135a128dc5d:Triangle Pattern.cpp
 int rows,i,j,k,o,l,m,n,x=0,y=1,z=1,a;
 
 cout<<"Enter number of rows:";
@@ -38,4 +46,8 @@ for(i=1;i<=rows;i++)
 	}
 
 return 0;
+<<<<<<< HEAD:TRIANGLE.CPP
 }
+=======
+}
+>>>>>>> c700d35abf4555cbf59093ede5d46135a128dc5d:Triangle Pattern.cpp

@@ -1,3 +1,11 @@
+<<<<<<< HEAD:RECURSIO.CPP
+/*WAP to print a pattern by recursion*/
+//Enter what is asked and wait and dont press enter!!!
+#include<iostream>
+//#include"stdlib.h"
+//#include"dos.h"
+using namespace std;
+=======
 /*
 WAP to print a inverted triange pattern by recursion
 for ex. for n=3, pattern will be
@@ -13,6 +21,7 @@ for ex. for n=3, pattern will be
 
 using namespace std;
 
+>>>>>>> c700d35abf4555cbf59093ede5d46135a128dc5d:Inverted Triange using Recursion.cpp
 int main()
 {
 void recursion(int);
@@ -23,8 +32,12 @@ cout<<"Enter no of rows:";
 cin>>x;
 
 recursion(x);
+<<<<<<< HEAD:RECURSIO.CPP
+return 0;
+=======
 
 return 0;;
+>>>>>>> c700d35abf4555cbf59093ede5d46135a128dc5d:Inverted Triange using Recursion.cpp
 }
 
 void recursion(int x)
@@ -42,9 +55,9 @@ void recursion(int x)
 	
 	else
 		{
-		sleep(1);
+		//sleep(1);
 		cout<<"\nGood Bye!!!";
-		sleep(1);
+		//sleep(1);
 		exit(0);
 		}
 }

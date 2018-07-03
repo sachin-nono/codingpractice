@@ -1,3 +1,7 @@
+<<<<<<< HEAD:FIBPATTE.CPP
+#include<iostream>
+using namespace std;
+=======
 /*Fibonacci Number Pattern   for ex. for n=3, patter would be
 0
 1	1
@@ -8,6 +12,7 @@
 
 using namespace std;
 
+>>>>>>> c700d35abf4555cbf59093ede5d46135a128dc5d:Fibonacci Number Pattern.cpp
 int main()
 {
 int rows;
@@ -28,6 +33,11 @@ for(int i=1;i<=rows;i++)
 		}
 	cout<<endl;
 	}
+<<<<<<< HEAD:FIBPATTE.CPP
+return 0;
+}
+=======
 
 return 0;
 }
+>>>>>>> c700d35abf4555cbf59093ede5d46135a128dc5d:Fibonacci Number Pattern.cpp

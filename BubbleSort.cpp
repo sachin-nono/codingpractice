@@ -31,7 +31,6 @@ if(size<=0||size>101)
 	{
 	cout<<"Enter in given range only!!!";
 	sleep(1);
-	exit(1);
 	}
 }
 
