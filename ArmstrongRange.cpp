@@ -7,7 +7,7 @@ using namespace std;
 
 int main()
 {
-long first,second,num,sum;
+long first,second,num;
 long checkarms(long);
 
 cout<<"Enter first number(between 0 to 100):";
@@ -17,11 +17,11 @@ cin>>second;
 
 for(long i=first;i<=second;i++)
 	{
+	long sum = 0;
 	num=i;
 	sum=checkarms(num);
 	if(sum==i)
 		cout<<i<<"\t";
-	sum=0;
 	}
 return 0;
 }

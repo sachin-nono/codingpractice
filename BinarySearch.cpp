@@ -2,21 +2,22 @@
 WAP for Binary search of an element in an array
 */
 #include<iostream>
-#include<dos>
+#include<dos> // remove this 
 #include<cstdlib>
 
 using namespace std;
 
 int main()
 {
-int binarysearch(int [],int,int);
+int binarysearch(int [], int, int);
 void condition(int);
 
-int size,arr[100],ele,pos;
+int size, arr[100], ele, pos;
 
 cout<<"Enter size of array<100 :";
 cin>>size;
 
+//rename the below function to isValid()
 condition(size);         //to check if entered sizs is in given range or not
 
 for(int i=0;i<size;i++)  //enter array elements
@@ -46,19 +47,21 @@ if(z<=0||z>100)
 		cout<<"\nEnter array elements in ascending order only:\n";
 }
 
-int binarysearch(int arr[],int size,int ele)
+
+int binarysearch(int arr[], int size, int ele)
 {
 int x,beg=0,last=size-1,mid;
 
 while(beg<=last)
 	{
-	mid=int((beg+last)/2);
+	mid=int((beg+last)/2); // Change it to (beg + (last-beg)/2)
+			       // Typecasting to int is not required.
 	if(ele==arr[mid])
 		return mid;
-		else if(ele<mid)
-			last=mid-1;
-			else
-				beg=mid+1;
+	else if(ele<mid)
+		last=mid-1;
+	else
+		beg=mid+1;
 	}
 return -1;
 }
