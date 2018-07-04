@@ -1,3 +1,7 @@
+/*
+Convert Binary Number to Decimal Number
+*/
+
 #include<iostream>
 #include<math.h>                //for function pow()
 #include<string.h>              //for function strlen()

@@ -12,7 +12,7 @@ long no,digit,rem,count=0;
 
 cout<<"Enter a number:";
 cin>>no;
-cout<<"Enter a digit to be counted (between 0 to 9) : ";
+cout<<endl<<"Enter a digit to be counted (between 0 to 9) : ";
 cin>>digit;
 
 while(no)
@@ -23,6 +23,6 @@ while(no)
 	no=no/10;
 	}
 
-cout<<"Number of times "<<digit<<" appeared in entered number is/are: "<<count;
+cout<<endl<<"Number of times "<<digit<<" appeared in entered number is/are: "<<count<<endl;
 return 0;
 }
