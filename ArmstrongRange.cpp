@@ -16,13 +16,11 @@ cout<<endl<<"Enter second number(between first to 10000) : ";
 cin>>second;
 
 for(long i=first;i<=second;i++)
-	{
 	long sum=0;
 	num=i;
 	sum=checkarms(num);
 	if(sum==i)
 		cout<<i<<"\t";
-    sum=0;
 	}
 cout<<endl;
 return 0;
