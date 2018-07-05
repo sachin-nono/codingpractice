@@ -1,5 +1,5 @@
 /*
-Print Armstrong Numbers between a given range
+	Print Armstrong Numbers between a given range
 */
 #include<iostream>
 
@@ -7,22 +7,24 @@ using namespace std;
 
 int main()
 {
-long first,second,num,sum;
+long first, second, num;
 long checkarms(long);
 
-cout<<"Enter first number(between 0 to 100):";
+cout<<"Enter first number(between 0 to 100) : ";
 cin>>first;
-cout<<"\nEnter second number(between first to 10000):";
+cout<<endl<<"Enter second number(between first to 10000) : ";
 cin>>second;
 
 for(long i=first;i<=second;i++)
 	{
+	long sum=0;
 	num=i;
 	sum=checkarms(num);
 	if(sum==i)
 		cout<<i<<"\t";
-	sum=0;
+    sum=0;
 	}
+cout<<endl;
 return 0;
 }
 
