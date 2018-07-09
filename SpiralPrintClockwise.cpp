@@ -22,10 +22,27 @@ int main()
         }
     cout<<endl;
     
-    if(n%2==0)
-        x=n/2;
+    if(m%2==0&&n%2==0)      //when both m and n are even
+    {
+        if(m>n)         
+            x=n/2;
+        
+        else if(m<n)
+            x=m/2;
+        
+        else
+            x=m/2;      //when both are equal and even
+    }
     else
-        x=n/2+1;
+    {
+        if(m==n)            //when both are equal and odd
+            x=m/2+1;
+        if(m%2==0)
+            x=m/2;
+        else 
+            x=n/2;
+    }
+    
     
     do
     {
