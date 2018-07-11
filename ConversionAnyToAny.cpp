@@ -3,264 +3,514 @@
 */
 
 #include<iostream>
-#include<string.h>
+#include<cstring>
 #include<math.h>
 
 using namespace std;
 
 int main()
 {
-    int sb,db;
-    void BinToOct(char []),OctToBin(char []),DecToBin(long);
-    long BinToDec(long),OctToDec(long),DecToOct(long);
+    long decimal;
     
-    //pascal casing for function names
+    int choice, len, dec, BinToDec(char [], int),  OctToDec(char [], int), HexdToDec(char [], int);
     
-    cout<<"Enter source number system base i.e.,"<<endl;
-    cout<<"input type of number either binary(2) or decimal(10) or octal(8) : ";
-    cin>>sb;
+    void BinToOct(char [], int), BinToHex(char [], int), OctToBin(char []);
+    void DecToBin(long), DecToOct(long), DecToHex(long), HexdToBin(char []);
+    char bin[20], oct[20], hexd[20];
     
-    cout<<endl<<"Enter destination number system base i.e.,"<<endl;
-    cout<<"convert to octal(8) or decimal(10) or binary(2) : ";
-    cin>>db;
     
-    if(sb==2&&db==8)        //Binary To Octal
+    cout<<"MENU :"<<endl;
+    cout<<"1. Binary To Octal.\n"<<"2. Binary To Decimal.\n"<<"3. Binary To Hexadecimal.\n";
+        
+    cout<<"\n4. Octal To Binary.\n"<<"5. Octal To Decimal.\n";
+        
+    cout<<"\n6. Decimal To Binary. \n"<<"7. Decimal To Octal. \n"<<"8. Decimal To Hexadecimal. \n";
+        
+    cout<<"\n9. Hexadecimal To Binary."<<"\n10. Hexadecimal To Decimal. \n";
+        
+    cout<<"\nEnter your choice : ";
+    cin>>choice;
+    
+    switch(choice)
     {
-        char bin[20];
-               
-        cout<<endl<<"Enter a binary number : ";
-        gets(bin);
+        case 1 :
         
-        BinToOct(bin);
+                cout<<"\nEnter Binary Number : ";
+                cin>>bin;           //because gets() function is not working
         
+                len=strlen(bin);
+        
+                cout<<"\nOctal Equivalent : ";
+        
+                BinToOct(bin,len);
+                
+                break;
+        
+        case 2 :
+        
+                cout<<"\nEnter Binary Number : ";
+                cin>>bin;           //because gets() function is not working
+                
+                len=strlen(bin);
+                
+                dec=BinToDec(bin,len);
+                
+                cout<<"\nDecimal Equivalent : "<<dec<<endl;
+                
+                break;
+        
+        case 3 :
+                cout<<"\nEnter Binary Number : ";
+                cin>>bin;
+                
+                len=strlen(bin);
+                
+                cout<<"\nHexadecimal Equivalent : ";
+                
+                BinToHex(bin,len);
+                
+                break;
+       
+        case 4 :
+                cout<<"\nEnter an Octal Number : ";
+                cin>>oct;
+                
+                cout<<"\nBinary Equivalent : ";
+                
+                OctToBin(oct);
+                
+                break;
+        
+        case 5 :
+                cout<<"\nEnter an Octal Number : ";
+                cin>>oct;
+                
+                len=strlen(oct);
+                
+                dec=OctToDec(oct,len);
+                
+                cout<<"\nDecimal Equivalent : "<<dec<<endl;
+                
+                break;
+        
+        case 6 :
+                cout<<"\nEnter a Decimal Number : ";
+                cin>>decimal;
+                
+                cout<<"\nBinary Equivalent : ";
+                
+                DecToBin(decimal);
+                
+                break;
+        
+        case 7 :
+                cout<<"\nEnter a Decimal Number : ";
+                cin>>decimal;
+                
+                cout<<"\nOctal Equivalent : ";
+                
+                DecToOct(decimal);
+                
+                break;
+        
+        case 8 :
+                cout<<"\nEnter a Decimal Number : ";
+                cin>>decimal;
+                
+                cout<<"\nHexadecimal Equivalent : ";
+                
+                DecToHex(decimal);
+                
+                break;
+        
+        case 9 :
+                cout<<"\nEnter a Hexadecimal Number : ";
+                cin>>hexd;
+                
+                cout<<"\nBinary Equivalent : ";
+                
+                HexdToBin(hexd);
+                
+                break;
+        
+        case 10 :
+                 cout<<"\nEnter a Hexadecimal Number : ";
+                 cin>>hexd;
+                 
+                 len=strlen(hexd);
+                 
+                 dec=HexdToDec(hexd,len);
+                 
+                 cout<<"\nDecimal Equivalent : "<<dec<<endl;
+                 
+                 break;
+        
+        default :
+                 cout<<"\nWRONG CHOICE!!!\n";
     }
-        else if(sb==2&&db==10)      //Binary To Decimal
-        {
-            long bin,dec;
-            
-            cout<<endl<<"Enter a Binary Number : ";
-            cin>>bin;
-            
-            dec=BinToDec(bin);
-            
-            cout<<endl<<"Decimal Equivalent : "<<dec<<endl;
-            
-        }       
-            else if(sb==8&&db==2)           //Octal To Binary
-            {
-                char octal[10];
-                
-                cout<<endl<<"Enter an Octal Number : ";
-                gets(octal);
-                
-                OctToBin(octal);
-            }       
-                
-                else if(sb==8&&db==10)          //Octal To Decimal
-                {
-                    long octal,dec;
-                    
-                    cout<<endl<<"Enter an Octal Number : ";
-                    cin>>octal;
-                    
-                    dec=OctToDec(octal);
-                    
-                    cout<<endl<<"Decimal Equivalent : "<<dec<<endl;
-                }     
-                else if(sb==10&&db==2)          //Decimal To Binary
-                {
-                    long dec;
-                    
-                    cout<<endl<<"Enter a Decimal Number : ";
-                    cin>>dec;
-                    
-                    DecToBin(dec);
-                }
-                        else if(sb==10&&db==8)          //Decimal To Octal
-                        {
-                            long decimal,octal;
-                            
-                            cout<<endl<<"Enter a Decimal Number : ";
-                            cin>>decimal;
-                            
-                            octal=DecToOct(decimal);
-                            cout<<endl<<"Octal Equivalent : "<<octal<<endl;
-                        }
-                            else
-                                cout<<endl<<"\nWrong Choice!!!\n"; 
     
     return 0;
 }
 
-// void convertToRadix(num, toRadix)
-
-
-void BinToOct(char bin[])         //Binary To Octal
+void BinToOct(char bin[], int len)      //Binary To Octal
 {
-    char temp;
-    int len,oct=0,i,j,x;
+    int a, arr[7], j=-1, sum=0, i=len-1, x;
     
-    len=strlen(bin);
+    lb:for(a=0;(i>=0&&a<=2);i--,a++)
+       {
+           x=bin[i]-'0';
+           sum=sum+x*pow(2,a);
+       }
+       
+    j++;
+    arr[j]=sum;
     
-    for(i=0,j=len-1;bin[i]!='\0';i++,j--)   //reversing numbers
-    {
-        if(bin[i]-'0'==0||bin[i]-'0'==1)
-        {
-            temp=bin[i];
-            bin[i]=bin[j];
-            bin[j]=temp;
-        }
-        else
-        {
-            cout<<endl<<"Entered number is not a Binary Number!!!";
-            goto mb;
-        }
-    }
-    
-    i=0;
-    
-    cout<<endl<<"Octal Equivalent : ";
-    
-    lb:for(j=0;j<3||bin[i]!='\0';i++,j++)
-    {
-        x=(bin[i]-'0');
-        oct=oct+(x*pow(2,j));
+    sum=0;
         
-    }
-    cout<<oct;
-    oct=0;
-    
-    if(bin[i]!='\0')
+    if(i>=0)
         goto lb;
- 
-mb: 
-    cout<<endl;   
-}
-
-
-long BinToDec(long bin)           //Binary To Decimal
-{
-    long dec=0,x;
-    int i=0;
     
-    while(bin)
-    {
-        x=bin%10;
-        dec=dec+x*pow(2,i);
-        i++;
-        bin/=10;
-    }
-    
-    return dec;
-}
-
-
-void OctToBin(char octal[])       //Octal To Binary
-{
-    int x,arr[10],len,i;
-    
-    for(i=0;octal[i]!='\0';i++)
-        arr[i]=octal[i]-'0';        //to convert char string into int array
-    
-    len=strlen(octal);                  
-    
-    cout<<endl<<"Binary Equivalent : ";
-    
-    for(i=0;i<len;i++)
-    {
-        x=arr[i];           //handling one number at a time
-        
-        switch(x)           //Binary equivalent for each x
-        {
-            case 0:
-            cout<<"000 ";
-            break;
-            
-            case 1:
-            cout<<"001 ";
-            break;
-            
-            case 2:
-            cout<<"010 ";
-            break;
-            
-            case 3:
-            cout<<"011 ";
-            break;
-            
-            case 4:
-            cout<<"100 ";
-            break;
-            
-            case 5:
-            cout<<"101 ";
-            break;
-            
-            case 6:
-            cout<<"110 ";
-            break;
-            
-            case 7:
-            cout<<"111 ";
-            break;
-            
-            default :
-            cout<<endl<<"Entered number is not an octal number!!!";
-        }
-    }   
-cout<<endl;
-}
-
-
-long OctToDec(long octal)         //Octal To Decimal
-{
-    long dec=0,x;
-    int i=0;
-      
-    while(octal)
-    {
-        x=octal%10;
-        dec=dec+x*pow(8,i);
-        i++;
-        octal/=10;
-    }
-    
-    return dec;
-}
-
-
-void DecToBin(long dec)           //Decimal To Binary
-{
-    long bin[20];
-    int i=0,j;
-        
-    while(dec)
-    {
-        bin[i]=dec%2;
-        dec/=2;
-        i++;
-    }
-    
-    cout<<endl<<"Binary Equivalent : ";
-    for(j=i-1;j>-1;j--)
-        cout<<bin[j];
+    for(;j>=0;j--)
+        cout<<arr[j];
     
     cout<<endl;
 }
 
 
-long DecToOct(long decimal)         //Decimal To Octal
-{
-    long octal=0,i=1;
-    int rem;
+int BinToDec(char bin[], int len)       //Binary To Decimal 
+{   
+    int x, sum=0;
+    for(int i=len-1,a=0;i>=0;i--,a++)
+    {
+        x=bin[i]-'0';
         
+        sum+=x*pow(2,a);
+    }
+    
+    return sum;    
+}    
+
+
+void BinToHex(char bin[], int len)      //Binary To Hexadecimal
+{
+    int j=-1, x, sum=0, a, i=len-1;
+    char arr[7];
+    
+    lb:for(a=0;(i>=0&&a<=3);i--,a++)
+    {
+        x=bin[i]-'0';
+        
+        sum+=x*pow(2,a);
+    }
+    
+    j++;
+    
+    switch(sum)
+    {
+        case 10 :
+                 arr[j]='A';
+                 break;
+                 
+        case 11 :
+                 arr[j]='B';
+                 break;
+                 
+        case 12 :
+                 arr[j]='C';
+                 break;
+                 
+        case 13 :
+                 arr[j]='D';
+                 break;
+                 
+        case 14 :
+                 arr[j]='E';
+                 break;
+                 
+        case 15 :
+                 arr[j]='F';
+                 break;
+        
+        default :
+                 arr[j]=sum+'0';
+    }
+    
+    sum=0;
+    
+    if(i>=0)
+        goto lb;
+    
+    for(;j>=0;j--)
+        cout<<arr[j];
+    
+    cout<<endl;
+}
+
+
+
+void OctToBin(char oct[])               //Octal To Binary
+{
+    
+    
+    int x;
+    
+    for(int i=0;oct[i]!='\0';i++)
+    {
+        x=oct[i]-'0';
+        
+        switch(x)
+        {
+            case 0 :    cout<<"000 ";
+                        break;
+                        
+            case 1 :    cout<<"001 ";
+                        break;
+                        
+            case 2 :    cout<<"010 ";
+                        break;
+                        
+            case 3 :    cout<<"011 ";
+                        break;
+                        
+            case 4 :    cout<<"100 ";
+                        break;
+                        
+            case 5 :    cout<<"101 ";
+                        break;
+                        
+            case 6 :    cout<<"110 ";
+                        break;
+                        
+            case 7 :    cout<<"111 ";
+                        break;
+        }
+    }
+    cout<<endl;
+}
+
+
+int OctToDec(char oct[], int len)       //Octal To Decimal
+{
+    int sum=0, x;
+    for(int i=len-1,a=0;i>=0;i--,a++)
+    {
+        x=oct[i]-'0';
+        
+        sum+=x*pow(8,a);
+    }
+    return sum;
+}
+
+
+
+void DecToBin(long decimal)             //Decimal To Binary
+{
+    int j=-1, rem[7];
+    
     while(decimal)
     {
-        rem=decimal%8;
-        octal=octal+(rem*i);
-        i*=10;
+        j++;
+        
+        rem[j]=decimal%2;
+        decimal/=2;
+        
+    }
+    
+    for(;j>=0;j--)
+        cout<<rem[j];
+    cout<<endl;
+}
+
+void DecToOct(long decimal)             //Decimal To Binary
+{
+    int j=-1, rem[7];
+    
+    while(decimal)
+    {
+        j++;
+        
+        rem[j]=decimal%8;
         decimal/=8;
     }
-       
-    return octal;
+    
+    for(;j>=0;j--)
+        cout<<rem[j];
+    
+    cout<<endl;
+}
+
+void DecToHex(long decimal)             //Decimal To Hexadecimal
+{
+    int j=-1, rem[7];
+    
+    while(decimal)
+    {
+        j++;
+        
+        rem[j]=(decimal%16);
+        decimal/=16;
+    }
+    
+    for(;j>=0;j--)
+    {
+        switch(rem[j])
+        {
+            case 10 :
+                        cout<<"A";
+                        break;
+                        
+            case 11 :
+                        cout<<"B";
+                        break;
+                        
+            case 12 :
+                        cout<<"C";
+                        break;
+                        
+            case 13 :
+                        cout<<"D";
+                        break;
+                        
+            case 14 :
+                        cout<<"E";
+                        break;
+                        
+            case 15 :
+                        cout<<"F";
+                        break;
+                        
+            default :
+                        cout<<rem[j];
+        }
+    }
+    cout<<endl;
+}
+
+
+
+void HexdToBin(char hexd[])             //Hexadecimal To Binary
+{
+    for(int i=0;hexd[i]!='\0';i++)
+    {
+        switch(hexd[i])
+        {
+            case '0' :
+                        cout<<"0000 ";
+                        break;
+            case '1' :
+                        cout<<"0001 ";
+                        break;
+            case '2' :
+                        cout<<"0010 ";
+                        break;
+            case '3' :
+                        cout<<"0011 ";
+                        break;
+            case '4' :
+                        cout<<"0100 ";
+                        break;
+            case '5' :
+                        cout<<"0101 ";
+                        break;
+            case '6' :
+                        cout<<"0110 ";
+                        break;
+            case '7' :
+                        cout<<"0111 ";
+                        break;
+            case '8' :
+                        cout<<"1000 ";
+                        break;
+            case '9' :
+                        cout<<"1001 ";
+                        break;
+            case 'A' :
+                        cout<<"1010 ";
+                        break;
+            case 'B' :
+                        cout<<"1011 ";
+                        break;
+            case 'C' :
+                        cout<<"1100 ";
+                        break;
+            case 'D' :
+                        cout<<"1101 ";
+                        break;
+            case 'E' :
+                        cout<<"1110 ";
+                        break;
+            case 'F' :
+                        cout<<"1111 ";
+                        break;
+        }
+    }
+    
+}
+
+
+int HexdToDec(char hexd [], int len)                        //Hexadecimal To Decimal
+{
+    int x, sum=0;
+    for(int i=len-1, a=0; i>=0; i--,a++)
+    {
+        switch(hexd[i])
+        {
+            case 'A' :
+            {
+                x=10;
+                sum+=x*pow(16,a);
+                
+                break;
+            }
+            
+            case 'B' :
+            {
+                x=11;
+                sum+=x*pow(16,a);
+                
+                break;
+            }
+            
+            case 'C' :
+            {
+                x=12;
+                sum+=x*pow(16,a);
+                
+                break;
+            }
+            
+            case 'D' :
+            {
+                x=13;
+                sum+=x*pow(16,a);
+                
+                break;
+            }
+            
+            case 'E' :
+            {
+                x=14;
+                sum+=x*pow(16,a);
+                
+                break;
+            }
+            
+            case 'F' :
+            {
+                x=15;
+                sum+=x*pow(16,a);
+                
+                break;
+            }
+            
+            default :
+            {
+                x=hexd[i]-'0';
+                sum+=x*pow(16,a);
+            }
+        }
+        
+    }
+    
+    return sum;
 }
