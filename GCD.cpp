@@ -13,10 +13,14 @@ int main()
     cout<<"Enter two numbers :\n";
     cin>>num1>>num2;
     
-    gcd=calgcd(num1,num2);
-
-    cout<<"\nGCD of "<<num1<<" and "<<num2<<" is : "<<gcd<<endl;
-    
+    if(num1==0&&num2==0)
+        cout<<"\nValues must be non-zero!!!\n";
+    else
+    {
+        gcd=calgcd(num1,num2);
+        
+        cout<<"\nGCD of "<<num1<<" and "<<num2<<" is : "<<gcd<<endl;
+    }
     return 0;
 }
 
