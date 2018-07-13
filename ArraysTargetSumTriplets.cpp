@@ -24,7 +24,7 @@ int main()
     cout<<"\nEnter target number : ";
     cin>>target;
     
-    cout<<"\nPairs of numbers whose sum is "<<target<<" are :";
+    cout<<"\nTriplets of numbers whose sum is "<<target<<" are :";
     
     for(int i=0;i<n;i++)
         for(int j=i+1;(j<=n&&j<n);j++)
