@@ -1,9 +1,9 @@
 /*
-    Arrays - Target Sum Pairs
+    Arrays - Target Sum Triplets
     
     Enter elements of an array.
     Input a number target.
-    Print all paris of numbers which sum to target.
+    Print all triplets of numbers which sum to target.
 */
 
 #include<iostream>
@@ -27,9 +27,12 @@ int main()
     cout<<"\nPairs of numbers whose sum is "<<target<<" are :";
     
     for(int i=0;i<n;i++)
-        for(int j=i+1;j<n;j++)
-            if((arr[i]+arr[j])==target)
-                cout<<endl<<arr[i]<<" and "<<arr[j]<<endl;
-            
+        for(int j=i+1;(j<=n&&j<n);j++)
+            for(int k=j+1;k<n;k++)
+            {
+                if((arr[i]+arr[j]+arr[k])==target)
+                cout<<endl<<arr[i]<<" , "<<arr[j]<<" and "<<arr[k]<<endl;
+            }
+
     return 0;
 }
