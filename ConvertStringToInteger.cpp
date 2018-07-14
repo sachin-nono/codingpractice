@@ -76,7 +76,7 @@ long x, number=0;
 
 long StrToInt(char str[])
 {
-    while(str[i]!='\0')
+    if(str[i]!='\0')
     {
         x=str[i]-'0';
         number*=10;
