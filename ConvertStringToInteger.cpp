@@ -56,11 +56,26 @@ int main()
 int checkFormat(char str[])
 {
     if(str[0]-'0'==0)
+    {
+        for(int j=0; str[j]!='\0'; j++)
+            if(!(isdigit(str[j])))
+                return -5;
         return 0;
+    }
     else if(str[0]=='-')
+    {
+        for(int j=0; str[j]!='\0'; j++)
+            if(!(isdigit(str[j])))
+                return -5;
         return -1;
+    }
     else if(str[0]=='+')
+    {
+        for(int j=0; str[j]!='\0'; j++)
+            if(!(isdigit(str[j])))
+                return -5;
         return -2;
+    }
     else
     {
         for(int j=0; str[j]!='\0'; j++)
