@@ -61,8 +61,6 @@ int main()
                 break;
             }
     }
-    cout<<endl;
-    for(i=0; i<N; ++i)
-        cout<<arr1[i]<<" ";
+    
     return 0;
 }
