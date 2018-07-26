@@ -35,19 +35,19 @@ bool isBalanced(char str[])
         if(str[i]=='[')
             ++a;
         
-        if(str[i]==']')
+        else if(str[i]==']')
             ++b;
         
-        if(str[i]=='{')
+        else if(str[i]=='{')
             ++c;
         
-        if(str[i]=='}')
+        else if(str[i]=='}')
             ++d;
         
-        if(str[i]=='(')
+        else if(str[i]=='(')
             ++e;
         
-        if(str[i]==')')
+        else if(str[i]==')')
             ++f;
         
         
